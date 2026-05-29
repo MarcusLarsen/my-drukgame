@@ -1,0 +1,86 @@
+[
+  {
+    "id": "c1",
+    "text": "Alle med hvide sokker tager 1 slurk.",
+    "category": "soft",
+    "level": 1,
+    "target": "all"
+  },
+  {
+    "id": "c2",
+    "text": "Peg på hvem der oftest kommer for sent. De tager 2 slurke.",
+    "category": "party",
+    "level": 1,
+    "target": "vote"
+  },
+  {
+    "id": "c3",
+    "text": "{NAME} vælg en makker. Når du drikker, deler I 1 slurk.",
+    "category": "party",
+    "level": 1,
+    "target": "one"
+  },
+  {
+    "id": "c4",
+    "text": "Tal som en influencer indtil din næste tur. Glemmer du det: 1 slurk.",
+    "category": "party",
+    "level": 2,
+    "target": "all"
+  },
+  {
+    "id": "c5",
+    "text": "Fortæl en cringe barndomsting, eller tag 2 slurke.",
+    "category": "party",
+    "level": 2,
+    "target": "one"
+  },
+  {
+    "id": "c6",
+    "text": "Hvem i rummet ville være værst at være fanget i en elevator med?",
+    "category": "spicy",
+    "level": 2,
+    "target": "all"
+  },
+  {
+    "id": "c7",
+    "text": "{NAME} skal fortælle sin mest pinlige date-historie.",
+    "category": "spicy",
+    "level": 3,
+    "target": "one"
+  },
+  {
+    "id": "c8",
+    "text": "Alle peger på den mest flirtende person. Personen tager 3 slurke.",
+    "category": "spicy",
+    "level": 3,
+    "target": "vote"
+  },
+  {
+  "id": "c9",
+  "text": "Hvem er mest likeable? {NAME} eller {NAME2}",
+  "category": "party",
+  "level": 2,
+  "target": "duel"
+  },
+  {
+  "id": "c10",
+  "text": "Hvem ville overleve længst i en zombieapokalypse? {NAME} eller {NAME2}",
+  "category": "party",
+  "level": 2,
+  "target": "duel"
+  },
+  {
+  "id": "c11",
+  "text": "Hvem har størst chance for at blive millionær? {NAME} eller {NAME2}",
+  "category": "party",
+  "level": 1,
+  "target": "duel"
+  },
+  {
+  "id": "c12",
+  "text": "Hvem ville være den værste chef? {NAME} eller {NAME2}",
+  "category": "spicy",
+  "level": 3,
+  "target": "duel"
+  }
+]

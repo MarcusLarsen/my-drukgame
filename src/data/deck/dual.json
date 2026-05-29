@@ -1,0 +1,212 @@
+[
+  {
+    "id": "d1",
+    "text": "Hvem er mest likeable? {NAME} eller {NAME2}",
+    "category": "party",
+    "level": 2,
+    "target": "duel"
+  },
+  {
+    "id": "d2",
+    "text": "Hvem ville overleve længst i en zombieapokalypse? {NAME} eller {NAME2}",
+    "category": "party",
+    "level": 2,
+    "target": "duel"
+  },
+  {
+    "id": "d3",
+    "text": "Hvem har størst chance for at blive millionær? {NAME} eller {NAME2}",
+    "category": "party",
+    "level": 1,
+    "target": "duel"
+  },
+  {
+    "id": "d4",
+    "text": "Hvem ville være den værste chef? {NAME} eller {NAME2}",
+    "category": "spicy",
+    "level": 3,
+    "target": "duel"
+  },
+  {
+    "id": "d5",
+    "text": "Hvem er mest sandsynlig til at blive kendt? {NAME} eller {NAME2}",
+    "category": "party",
+    "level": 2,
+    "target": "duel"
+  },
+  {
+    "id": "d6",
+    "text": "Hvem ville klare sig bedst på en øde ø? {NAME} eller {NAME2}",
+    "category": "party",
+    "level": 2,
+    "target": "duel"
+  },
+  {
+    "id": "d7",
+    "text": "Hvem er mest romantisk? {NAME} eller {NAME2}",
+    "category": "spicy",
+    "level": 2,
+    "target": "duel"
+  },
+  {
+    "id": "d8",
+    "text": "Hvem ville få flest følgere på TikTok? {NAME} eller {NAME2}",
+    "category": "party",
+    "level": 1,
+    "target": "duel"
+  },
+  {
+    "id": "d9",
+    "text": "Hvem er mest tilbøjelig til at blive anholdt? {NAME} eller {NAME2}",
+    "category": "party",
+    "level": 3,
+    "target": "duel"
+  },
+  {
+    "id": "d10",
+    "text": "Hvem ville være bedst i Paradise Hotel? {NAME} eller {NAME2}",
+    "category": "spicy",
+    "level": 3,
+    "target": "duel"
+  },
+  {
+    "id": "d11",
+    "text": "Hvem er bedst til at flirte? {NAME} eller {NAME2}",
+    "category": "spicy",
+    "level": 2,
+    "target": "duel"
+  },
+  {
+    "id": "d12",
+    "text": "Hvem ville være den bedste statsminister? {NAME} eller {NAME2}",
+    "category": "party",
+    "level": 2,
+    "target": "duel"
+  },
+  {
+    "id": "d13",
+    "text": "Hvem ville overleve længst uden internet? {NAME} eller {NAME2}",
+    "category": "soft",
+    "level": 1,
+    "target": "duel"
+  },
+  {
+    "id": "d14",
+    "text": "Hvem er mest sandsynlig til at glemme sin egen fødselsdag? {NAME} eller {NAME2}",
+    "category": "soft",
+    "level": 1,
+    "target": "duel"
+  },
+  {
+    "id": "d15",
+    "text": "Hvem ville være den bedste lærer? {NAME} eller {NAME2}",
+    "category": "soft",
+    "level": 1,
+    "target": "duel"
+  },
+  {
+    "id": "d16",
+    "text": "Hvem er mest konkurrencemenneske? {NAME} eller {NAME2}",
+    "category": "party",
+    "level": 2,
+    "target": "duel"
+  },
+  {
+    "id": "d17",
+    "text": "Hvem ville være mest sandsynlig til at flytte til udlandet? {NAME} eller {NAME2}",
+    "category": "party",
+    "level": 1,
+    "target": "duel"
+  },
+  {
+    "id": "d18",
+    "text": "Hvem er mest tilbøjelig til at sende en besked kl. 03 om natten? {NAME} eller {NAME2}",
+    "category": "spicy",
+    "level": 2,
+    "target": "duel"
+  },
+  {
+    "id": "d19",
+    "text": "Hvem ville være bedst til speed dating? {NAME} eller {NAME2}",
+    "category": "spicy",
+    "level": 2,
+    "target": "duel"
+  },
+  {
+    "id": "d20",
+    "text": "Hvem ville være mest sandsynlig til at blive influencer? {NAME} eller {NAME2}",
+    "category": "party",
+    "level": 2,
+    "target": "duel"
+  },
+  {
+    "id": "d21",
+    "text": "Hvem ville være den værste roommate? {NAME} eller {NAME2}",
+    "category": "party",
+    "level": 2,
+    "target": "duel"
+  },
+  {
+    "id": "d22",
+    "text": "Hvem er mest sandsynlig til at vinde i Lotto? {NAME} eller {NAME2}",
+    "category": "soft",
+    "level": 1,
+    "target": "duel"
+  },
+  {
+    "id": "d23",
+    "text": "Hvem er mest tilbøjelig til at falde i søvn først til en fest? {NAME} eller {NAME2}",
+    "category": "party",
+    "level": 1,
+    "target": "duel"
+  },
+  {
+    "id": "d24",
+    "text": "Hvem ville være bedst til at starte en kult? {NAME} eller {NAME2}",
+    "category": "party",
+    "level": 3,
+    "target": "duel"
+  },
+  {
+    "id": "d25",
+    "text": "Hvem er mest sandsynlig til at få en sexvideo lækket? {NAME} eller {NAME2}",
+    "category": "spicy",
+    "level": 3,
+    "target": "duel"
+  },
+  {
+    "id": "d26",
+    "text": "Hvem ville få flest matches på Tinder? {NAME} eller {NAME2}",
+    "category": "spicy",
+    "level": 3,
+    "target": "duel"
+  },
+  {
+    "id": "d27",
+    "text": "Hvem ville være bedst til at lyve sig ud af problemer? {NAME} eller {NAME2}",
+    "category": "party",
+    "level": 2,
+    "target": "duel"
+  },
+  {
+    "id": "d28",
+    "text": "Hvem er mest tilbøjelig til at blive viral på internettet? {NAME} eller {NAME2}",
+    "category": "party",
+    "level": 2,
+    "target": "duel"
+  },
+  {
+    "id": "d29",
+    "text": "Hvem ville være den bedste livvagt? {NAME} eller {NAME2}",
+    "category": "soft",
+    "level": 1,
+    "target": "duel"
+  },
+  {
+    "id": "d30",
+    "text": "Hvem ville folk helst være strandet på en ø med? {NAME} eller {NAME2}",
+    "category": "party",
+    "level": 2,
+    "target": "duel"
+  }
+]

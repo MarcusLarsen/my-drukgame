@@ -1,0 +1,352 @@
+[
+  {
+    "id": "sp1",
+    "text": "Hvem i rummet ville du helst på date med?",
+    "category": "spicy",
+    "level": 2,
+    "target": "all"
+  },
+  {
+    "id": "sp2",
+    "text": "{NAME} fortæl om dit værste crush.",
+    "category": "spicy",
+    "level": 3,
+    "target": "one"
+  },
+  {
+    "id": "sp3",
+    "text": "Alle peger på den mest flirtende spiller.",
+    "category": "spicy",
+    "level": 3,
+    "target": "vote"
+  },
+  {
+    "id": "sp4",
+    "text": "Fortæl om din mest pinlige date.",
+    "category": "spicy",
+    "level": 3,
+    "target": "one"
+  },
+  {
+    "id": "sp5",
+    "text": "Hvem svarer langsomst på beskeder?",
+    "category": "spicy",
+    "level": 2,
+    "target": "all"
+  },
+  {
+    "id": "sp6",
+    "text": "{NAME} nævn den mest attraktive kendis efter din mening.",
+    "category": "spicy",
+    "level": 2,
+    "target": "one"
+  },
+  {
+    "id": "sp7",
+    "text": "Alle peger på den person der mest sandsynligt bliver gift først.",
+    "category": "spicy",
+    "level": 2,
+    "target": "vote"
+  },
+  {
+    "id": "sp8",
+    "text": "Hvem i rummet ville være den bedste kæreste?",
+    "category": "spicy",
+    "level": 2,
+    "target": "vote"
+  },
+  {
+    "id": "sp9",
+    "text": "{NAME} fortæl om den værste pickup line du har hørt.",
+    "category": "spicy",
+    "level": 2,
+    "target": "one"
+  },
+  {
+    "id": "sp10",
+    "text": "Alle der har været forelskede mere end 3 gange tager 1 slurk.",
+    "category": "spicy",
+    "level": 2,
+    "target": "all"
+  },
+  {
+    "id": "sp11",
+    "text": "Hvem er mest sandsynlig til at sende en besked klokken 03 om natten?",
+    "category": "spicy",
+    "level": 2,
+    "target": "vote"
+  },
+  {
+    "id": "sp12",
+    "text": "{NAME} hvad er det sødeste nogen har gjort for dig?",
+    "category": "spicy",
+    "level": 2,
+    "target": "one"
+  },
+  {
+    "id": "sp13",
+    "text": "Alle peger på den person der får mest opmærksomhed på sociale medier.",
+    "category": "spicy",
+    "level": 2,
+    "target": "vote"
+  },
+  {
+    "id": "sp14",
+    "text": "Fortæl om dit mest akavede øjeblik med en person du kunne lide.",
+    "category": "spicy",
+    "level": 3,
+    "target": "one"
+  },
+  {
+    "id": "sp15",
+    "text": "Hvem ville være den værste ekskæreste?",
+    "category": "spicy",
+    "level": 3,
+    "target": "vote"
+  },
+  {
+    "id": "sp16",
+    "text": "{NAME} nævn en egenskab du finder attraktiv.",
+    "category": "spicy",
+    "level": 2,
+    "target": "one"
+  },
+  {
+    "id": "sp17",
+    "text": "Alle peger på den mest romantiske spiller.",
+    "category": "spicy",
+    "level": 2,
+    "target": "vote"
+  },
+  {
+    "id": "sp18",
+    "text": "Hvem ville mest sandsynligt skrive en kærlighedssang?",
+    "category": "spicy",
+    "level": 2,
+    "target": "vote"
+  },
+  {
+    "id": "sp19",
+    "text": "{NAME} fortæl om dit første crush.",
+    "category": "spicy",
+    "level": 3,
+    "target": "one"
+  },
+  {
+    "id": "sp20",
+    "text": "Hvem ville være den bedste wingman eller wingwoman?",
+    "category": "spicy",
+    "level": 2,
+    "target": "vote"
+  },
+  {
+    "id": "sp21",
+    "text": "Alle der har sendt et hjerte i dag tager 1 slurk.",
+    "category": "spicy",
+    "level": 1,
+    "target": "all"
+  },
+  {
+    "id": "sp22",
+    "text": "{NAME} hvem ville du tage med på en luksusferie?",
+    "category": "spicy",
+    "level": 2,
+    "target": "one"
+  },
+  {
+    "id": "sp23",
+    "text": "Alle peger på den mest charmerende spiller.",
+    "category": "spicy",
+    "level": 2,
+    "target": "vote"
+  },
+  {
+    "id": "sp24",
+    "text": "Fortæl om din værste dating-fejl.",
+    "category": "spicy",
+    "level": 3,
+    "target": "one"
+  },
+  {
+    "id": "sp25",
+    "text": "Hvem ville få flest matches på en datingside?",
+    "category": "spicy",
+    "level": 3,
+    "target": "vote"
+  },
+  {
+    "id": "sp26",
+    "text": "{NAME} hvad er dit største turn-off?",
+    "category": "spicy",
+    "level": 3,
+    "target": "one"
+  },
+  {
+    "id": "sp27",
+    "text": "Alle peger på den spiller der er sværest at læse.",
+    "category": "spicy",
+    "level": 2,
+    "target": "vote"
+  },
+  {
+    "id": "sp28",
+    "text": "Hvem er mest sandsynlig til at blive forelsket først?",
+    "category": "spicy",
+    "level": 2,
+    "target": "vote"
+  },
+  {
+    "id": "sp29",
+    "text": "{NAME} fortæl om din mest pinlige besked.",
+    "category": "spicy",
+    "level": 3,
+    "target": "one"
+  },
+  {
+    "id": "sp30",
+    "text": "Alle peger på den mest jaloux spiller.",
+    "category": "spicy",
+    "level": 3,
+    "target": "vote"
+  },
+  {
+    "id": "sp31",
+    "text": "Hvem ville være bedst i et reality-datingprogram?",
+    "category": "spicy",
+    "level": 2,
+    "target": "vote"
+  },
+  {
+    "id": "sp32",
+    "text": "{NAME} hvad er det mest romantiske du har gjort?",
+    "category": "spicy",
+    "level": 3,
+    "target": "one"
+  },
+  {
+    "id": "sp33",
+    "text": "Alle peger på den mest mystiske spiller.",
+    "category": "spicy",
+    "level": 2,
+    "target": "vote"
+  },
+  {
+    "id": "sp34",
+    "text": "Hvem ville være sværest at sige nej til?",
+    "category": "spicy",
+    "level": 3,
+    "target": "vote"
+  },
+  {
+    "id": "sp35",
+    "text": "{NAME} fortæl om din værste flirt.",
+    "category": "spicy",
+    "level": 3,
+    "target": "one"
+  },
+  {
+    "id": "sp36",
+    "text": "Alle peger på den spiller der får flest komplimenter.",
+    "category": "spicy",
+    "level": 2,
+    "target": "vote"
+  },
+  {
+    "id": "sp37",
+    "text": "Hvem ville være mest sandsynlig til at skrive et kærlighedsbrev?",
+    "category": "spicy",
+    "level": 2,
+    "target": "vote"
+  },
+  {
+    "id": "sp38",
+    "text": "{NAME} nævn en ting der gør nogen ekstra attraktive.",
+    "category": "spicy",
+    "level": 2,
+    "target": "one"
+  },
+  {
+    "id": "sp39",
+    "text": "Alle peger på den spiller der er bedst til at flirte.",
+    "category": "spicy",
+    "level": 3,
+    "target": "vote"
+  },
+  {
+    "id": "sp40",
+    "text": "Hvem ville være mest sandsynlig til at blive kendt på grund af sit udseende?",
+    "category": "spicy",
+    "level": 3,
+    "target": "vote"
+  },
+  {
+    "id": "sp41",
+    "text": "{NAME} fortæl om din mest akavede kompliment.",
+    "category": "spicy",
+    "level": 3,
+    "target": "one"
+  },
+  {
+    "id": "sp42",
+    "text": "Alle peger på den spiller der er mest selvsikker.",
+    "category": "spicy",
+    "level": 2,
+    "target": "vote"
+  },
+  {
+    "id": "sp43",
+    "text": "Hvem ville være bedst til speed dating?",
+    "category": "spicy",
+    "level": 2,
+    "target": "vote"
+  },
+  {
+    "id": "sp44",
+    "text": "{NAME} hvad er din værste date-idé?",
+    "category": "spicy",
+    "level": 2,
+    "target": "one"
+  },
+  {
+    "id": "sp45",
+    "text": "Alle peger på den spiller der er mest tilbøjelig til at falde for en dårlig idé.",
+    "category": "spicy",
+    "level": 2,
+    "target": "vote"
+  },
+  {
+    "id": "sp46",
+    "text": "Hvem ville være mest sandsynlig til at skrive først efter en date?",
+    "category": "spicy",
+    "level": 2,
+    "target": "vote"
+  },
+  {
+    "id": "sp47",
+    "text": "{NAME} fortæl om den værste gave du har modtaget.",
+    "category": "spicy",
+    "level": 2,
+    "target": "one"
+  },
+  {
+    "id": "sp48",
+    "text": "Alle peger på den mest eventyrlystne spiller.",
+    "category": "spicy",
+    "level": 2,
+    "target": "vote"
+  },
+  {
+    "id": "sp49",
+    "text": "Hvem ville være mest sandsynlig til at blive forelsket på første date?",
+    "category": "spicy",
+    "level": 3,
+    "target": "vote"
+  },
+  {
+    "id": "sp50",
+    "text": "Alle tager 1 slurk for deres værste dating-beslutning.",
+    "category": "spicy",
+    "level": 2,
+    "target": "all"
+  }
+]

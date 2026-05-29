@@ -1,0 +1,352 @@
+[
+  {
+    "id": "s1",
+    "text": "Alle med hvide sokker tager 1 slurk.",
+    "category": "soft",
+    "level": 1,
+    "target": "all"
+  },
+  {
+    "id": "s2",
+    "text": "Den højeste spiller tager 1 slurk.",
+    "category": "soft",
+    "level": 1,
+    "target": "all"
+  },
+  {
+    "id": "s3",
+    "text": "Den laveste spiller tager 1 slurk.",
+    "category": "soft",
+    "level": 1,
+    "target": "all"
+  },
+  {
+    "id": "s4",
+    "text": "Alle der har sendt en besked i dag tager 1 slurk.",
+    "category": "soft",
+    "level": 1,
+    "target": "all"
+  },
+  {
+    "id": "s5",
+    "text": "Alle med briller tager 1 slurk.",
+    "category": "soft",
+    "level": 1,
+    "target": "all"
+  },
+  {
+    "id": "s6",
+    "text": "Den der stod sidst op i dag tager 1 slurk.",
+    "category": "soft",
+    "level": 1,
+    "target": "all"
+  },
+  {
+    "id": "s7",
+    "text": "Alle der har en hund tager 1 slurk.",
+    "category": "soft",
+    "level": 1,
+    "target": "all"
+  },
+  {
+    "id": "s8",
+    "text": "Alle der har en kat tager 1 slurk.",
+    "category": "soft",
+    "level": 1,
+    "target": "all"
+  },
+  {
+    "id": "s9",
+    "text": "Alle der har været på ferie i år tager 1 slurk.",
+    "category": "soft",
+    "level": 1,
+    "target": "all"
+  },
+  {
+    "id": "s10",
+    "text": "Yngste spiller tager 1 slurk.",
+    "category": "soft",
+    "level": 1,
+    "target": "one"
+  },
+  {
+    "id": "s11",
+    "text": "Ældste spiller tager 1 slurk.",
+    "category": "soft",
+    "level": 1,
+    "target": "one"
+  },
+  {
+    "id": "s12",
+    "text": "Alle der har kørekort tager 1 slurk.",
+    "category": "soft",
+    "level": 1,
+    "target": "all"
+  },
+  {
+    "id": "s13",
+    "text": "Alle der har været vågne siden før kl. 7 tager 1 slurk.",
+    "category": "soft",
+    "level": 1,
+    "target": "all"
+  },
+  {
+    "id": "s14",
+    "text": "Alle der har søskende tager 1 slurk.",
+    "category": "soft",
+    "level": 1,
+    "target": "all"
+  },
+  {
+    "id": "s15",
+    "text": "Alle der har fødselsdag i første halvår tager 1 slurk.",
+    "category": "soft",
+    "level": 1,
+    "target": "all"
+  },
+  {
+    "id": "s16",
+    "text": "Alle der har fødselsdag i anden halvår tager 1 slurk.",
+    "category": "soft",
+    "level": 1,
+    "target": "all"
+  },
+  {
+    "id": "s17",
+    "text": "Alle der har en Android telefon tager 1 slurk.",
+    "category": "soft",
+    "level": 1,
+    "target": "all"
+  },
+  {
+    "id": "s18",
+    "text": "Alle der har en iPhone tager 1 slurk.",
+    "category": "soft",
+    "level": 1,
+    "target": "all"
+  },
+  {
+    "id": "s19",
+    "text": "Den sidste der brugte TikTok tager 1 slurk.",
+    "category": "soft",
+    "level": 1,
+    "target": "one"
+  },
+  {
+    "id": "s20",
+    "text": "Alle der har været i biografen det sidste år tager 1 slurk.",
+    "category": "soft",
+    "level": 1,
+    "target": "all"
+  },
+  {
+    "id": "s21",
+    "text": "Alle der har spillet computer i denne uge tager 1 slurk.",
+    "category": "soft",
+    "level": 1,
+    "target": "all"
+  },
+  {
+    "id": "s22",
+    "text": "Alle der har drukket kaffe i dag tager 1 slurk.",
+    "category": "soft",
+    "level": 1,
+    "target": "all"
+  },
+  {
+    "id": "s23",
+    "text": "Alle der har drukket energidrik i denne uge tager 1 slurk.",
+    "category": "soft",
+    "level": 1,
+    "target": "all"
+  },
+  {
+    "id": "s24",
+    "text": "Alle der har været ude at løbe i år tager 1 slurk.",
+    "category": "soft",
+    "level": 1,
+    "target": "all"
+  },
+  {
+    "id": "s25",
+    "text": "Alle der har været i fitness denne måned tager 1 slurk.",
+    "category": "soft",
+    "level": 1,
+    "target": "all"
+  },
+  {
+    "id": "s26",
+    "text": "Alle der har været udenfor Danmark tager 1 slurk.",
+    "category": "soft",
+    "level": 1,
+    "target": "all"
+  },
+  {
+    "id": "s27",
+    "text": "Alle der har prøvet at flyve tager 1 slurk.",
+    "category": "soft",
+    "level": 1,
+    "target": "all"
+  },
+  {
+    "id": "s28",
+    "text": "Alle der har en tatovering tager 1 slurk.",
+    "category": "soft",
+    "level": 1,
+    "target": "all"
+  },
+  {
+    "id": "s29",
+    "text": "Alle der har farvet hår tager 1 slurk.",
+    "category": "soft",
+    "level": 1,
+    "target": "all"
+  },
+  {
+    "id": "s30",
+    "text": "Alle der har set en serie i denne uge tager 1 slurk.",
+    "category": "soft",
+    "level": 1,
+    "target": "all"
+  },
+  {
+    "id": "s31",
+    "text": "Alle der har en hoodie på tager 1 slurk.",
+    "category": "soft",
+    "level": 1,
+    "target": "all"
+  },
+  {
+    "id": "s32",
+    "text": "Alle der har sorte sko på tager 1 slurk.",
+    "category": "soft",
+    "level": 1,
+    "target": "all"
+  },
+  {
+    "id": "s33",
+    "text": "Alle der har arbejdet i dag tager 1 slurk.",
+    "category": "soft",
+    "level": 1,
+    "target": "all"
+  },
+  {
+    "id": "s34",
+    "text": "Alle der har studeret i dag tager 1 slurk.",
+    "category": "soft",
+    "level": 1,
+    "target": "all"
+  },
+  {
+    "id": "s35",
+    "text": "Alle der har glemt deres nøgle mindst én gang tager 1 slurk.",
+    "category": "soft",
+    "level": 1,
+    "target": "all"
+  },
+  {
+    "id": "s36",
+    "text": "Alle der har mistet deres telefon mindst én gang tager 1 slurk.",
+    "category": "soft",
+    "level": 1,
+    "target": "all"
+  },
+  {
+    "id": "s37",
+    "text": "Alle der kan fløjte tager 1 slurk.",
+    "category": "soft",
+    "level": 1,
+    "target": "all"
+  },
+  {
+    "id": "s38",
+    "text": "Alle der kan jonglere tager 1 slurk.",
+    "category": "soft",
+    "level": 1,
+    "target": "all"
+  },
+  {
+    "id": "s39",
+    "text": "Alle der har været vågne hele natten mindst én gang tager 1 slurk.",
+    "category": "soft",
+    "level": 1,
+    "target": "all"
+  },
+  {
+    "id": "s40",
+    "text": "Alle der har været på festival tager 1 slurk.",
+    "category": "soft",
+    "level": 1,
+    "target": "all"
+  },
+  {
+    "id": "s41",
+    "text": "Alle der har sovet over sig denne måned tager 1 slurk.",
+    "category": "soft",
+    "level": 1,
+    "target": "all"
+  },
+  {
+    "id": "s42",
+    "text": "Alle der har spist pizza i denne uge tager 1 slurk.",
+    "category": "soft",
+    "level": 1,
+    "target": "all"
+  },
+  {
+    "id": "s43",
+    "text": "Alle der har købt noget online denne måned tager 1 slurk.",
+    "category": "soft",
+    "level": 1,
+    "target": "all"
+  },
+  {
+    "id": "s44",
+    "text": "Alle der har set en gyserfilm tager 1 slurk.",
+    "category": "soft",
+    "level": 1,
+    "target": "all"
+  },
+  {
+    "id": "s45",
+    "text": "Alle der kan nævne 3 Marvel-film tager 1 slurk.",
+    "category": "soft",
+    "level": 1,
+    "target": "all"
+  },
+  {
+    "id": "s46",
+    "text": "Alle der har været i IKEA mere end 5 gange tager 1 slurk.",
+    "category": "soft",
+    "level": 1,
+    "target": "all"
+  },
+  {
+    "id": "s47",
+    "text": "Alle der har haft en brækket knogle tager 1 slurk.",
+    "category": "soft",
+    "level": 1,
+    "target": "all"
+  },
+  {
+    "id": "s48",
+    "text": "Alle der har kørt i tog denne måned tager 1 slurk.",
+    "category": "soft",
+    "level": 1,
+    "target": "all"
+  },
+  {
+    "id": "s49",
+    "text": "Alle der har været ude at spise denne uge tager 1 slurk.",
+    "category": "soft",
+    "level": 1,
+    "target": "all"
+  },
+  {
+    "id": "s50",
+    "text": "Alle tager 1 slurk.",
+    "category": "soft",
+    "level": 1,
+    "target": "all"
+  }
+]
