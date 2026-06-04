@@ -29,7 +29,7 @@ type HistoryItem = {
   playerIds?: string[];
 };
 
-export type Screen = 'setup' | 'mode' | 'game';
+export type Screen = 'setup' | 'mode' | 'game' | 'bottle';
 export type GameMode = 'normal' | 'chaos' | 'spicy';
 
 type SessionState = {

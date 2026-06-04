@@ -6,7 +6,9 @@ export default function SetupScreen() {
   const players = useSession((s) => s.players);
   const setPlayers = useSession((s) => s.setPlayers);
   const setScreen = useSession((s) => s.setScreen);
+
   const addCustomCard = useSession((s) => s.addCustomCard);
+  const removeCustomCard = useSession((s) => s.removeCustomCard);
   const customCards = useSession((s) => s.customCards);
 
   const [names, setNames] = useState(
@@ -14,13 +16,22 @@ export default function SetupScreen() {
   );
 
   const [customText, setCustomText] = useState('');
+  const canStart =
+  names.filter((n) => n.trim().length > 0).length >= 2;
   const [customCategory, setCustomCategory] =
     useState<Card['category']>('party');
 
   function updateName(index: number, value: string) {
     const copy = [...names];
     copy[index] = value;
+
     setNames(copy);
+
+    const cleanNames = copy.filter(
+      (n) => n.trim().length > 0
+    );
+
+    setPlayers(cleanNames);
   }
 
   function addPlayer() {
@@ -28,14 +39,22 @@ export default function SetupScreen() {
   }
 
   function removePlayer(index: number) {
-    setNames(names.filter((_, i) => i !== index));
+    const updatedNames = names.filter((_, i) => i !== index);
+
+    setNames(updatedNames);
+
+    const cleanNames = updatedNames.filter(
+      (n) => n.trim().length > 0
+    );
+
+    setPlayers(cleanNames);
   }
 
   function handleStart() {
     const cleanNames = names.filter((n) => n.trim().length > 0);
 
-    if (cleanNames.length === 0) {
-      alert('Tilføj mindst én spiller');
+    if (cleanNames.length < 2) {
+      alert('Tilføj mindst 2 spillere for at starte');
       return;
     }
 
@@ -79,6 +98,9 @@ export default function SetupScreen() {
         {names.map((name, index) => (
           <div key={index} className="flex gap-2">
             <input
+              id={`player-${index}`}
+              name={`player-${index}`}
+              autoComplete="off"
               value={name}
               placeholder={`Spiller ${index + 1}`}
               onChange={(e) => updateName(index, e.target.value)}
@@ -87,6 +109,7 @@ export default function SetupScreen() {
 
             {names.length > 1 && (
               <button
+                type="button"
                 onClick={() => removePlayer(index)}
                 className="bg-red-500 hover:bg-red-400 px-4 rounded-xl"
               >
@@ -97,6 +120,7 @@ export default function SetupScreen() {
         ))}
 
         <button
+          type="button"
           onClick={addPlayer}
           className="bg-slate-700 hover:bg-slate-600 transition rounded-xl py-3 font-bold"
         >
@@ -113,6 +137,9 @@ export default function SetupScreen() {
           </p>
 
           <textarea
+            id="custom-card-text"
+            name="custom-card-text"
+            autoComplete="off"
             value={customText}
             onChange={(e) => setCustomText(e.target.value)}
             placeholder="Skriv dit eget kort... Brug evt. {NAME} eller {NAME2}"
@@ -120,6 +147,8 @@ export default function SetupScreen() {
           />
 
           <select
+            id="custom-card-category"
+            name="custom-card-category"
             value={customCategory}
             onChange={(e) =>
               setCustomCategory(e.target.value as Card['category'])
@@ -132,6 +161,7 @@ export default function SetupScreen() {
           </select>
 
           <button
+            type="button"
             onClick={handleAddCustomCard}
             className="bg-purple-600 hover:bg-purple-500 transition rounded-xl py-3 font-bold"
           >
@@ -141,17 +171,53 @@ export default function SetupScreen() {
           <p className="text-slate-400 text-sm">
             Egne kort gemt: {customCards.length}
           </p>
+
+          {customCards.length > 0 && (
+            <div className="flex flex-col gap-2 max-h-48 overflow-y-auto pr-1">
+              {customCards.map((card) => (
+                <div
+                  key={card.id}
+                  className="bg-slate-700 rounded-xl p-3 flex gap-3 justify-between items-start"
+                >
+                  <div className="min-w-0">
+                    <div className="text-xs font-black text-slate-300">
+                      {card.category.toUpperCase()} • {card.target.toUpperCase()}
+                    </div>
+
+                    <div className="text-sm text-slate-200 break-words">
+                      {card.text}
+                    </div>
+                  </div>
+
+                  <button
+                    type="button"
+                    onClick={() => removeCustomCard(card.id)}
+                    className="text-red-300 hover:text-red-200 font-bold shrink-0"
+                    title="Slet kort"
+                  >
+                    ❌
+                  </button>
+                </div>
+              ))}
+            </div>
+          )}
         </div>
 
         <InstallButton />
-        
+
         <button
           onClick={handleStart}
-          className="bg-green-600 hover:bg-green-500 transition rounded-xl py-4 text-lg font-black"
+          disabled={!canStart}
+          className={`rounded-xl py-4 text-lg font-black transition ${
+            canStart
+              ? 'bg-green-600 hover:bg-green-500'
+              : 'bg-slate-600 text-slate-400 cursor-not-allowed'
+          }`}
         >
-          ▶ Start spil
+          {canStart
+            ? '▶ Start spil'
+            : 'Mindst 2 spillere kræves'}
         </button>
-
       </div>
     </div>
   );

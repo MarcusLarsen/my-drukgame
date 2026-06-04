@@ -45,6 +45,13 @@ export default function ModeSelectScreen() {
         </button>
 
         <button
+          onClick={() => setScreen('bottle')}
+          className="bg-blue-600 hover:bg-blue-500 transition p-5 rounded-2xl font-black text-xl"
+        >
+          🍾 Flaskehalsen peger på
+        </button>
+
+        <button
           onClick={() => setScreen('setup')}
           className="mt-4 text-slate-400 hover:text-white transition font-bold"
         >

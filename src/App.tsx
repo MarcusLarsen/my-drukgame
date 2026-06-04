@@ -1,6 +1,7 @@
 import GameScreen from './components/GameScreen';
 import SetupScreen from './components/SetupScreen';
 import ModeSelectScreen from './components/ModeSelectScreen';
+import BottleSpinScreen from './components/BottleSpinScreen';
 import { useSession } from './store/session';
 
 function App() {
@@ -15,6 +16,9 @@ function App() {
 
     case 'game':
       return <GameScreen />;
+
+    case 'bottle':
+      return <BottleSpinScreen />;
 
     default:
       return <SetupScreen />;
