@@ -1,350 +1,350 @@
 [
   {
     "id": "sp1",
-    "text": "Hvem i rummet ville du helst på date med?",
-    "category": "spicy",
-    "level": 2,
-    "target": "all"
-  },
-  {
-    "id": "sp2",
-    "text": "{NAME} fortæl om dit værste crush.",
+    "text": "{NAME} fortæller om sit mest akavede crush eller tager 3 slurke. {NAME2} må stille ét opfølgende spørgsmål.",
     "category": "spicy",
     "level": 3,
     "target": "one"
   },
   {
-    "id": "sp3",
-    "text": "Alle peger på den mest flirtende spiller.",
+    "id": "sp2",
+    "text": "Alle peger på den mest flirtende spiller. Personen tager 2 slurke.",
     "category": "spicy",
-    "level": 3,
+    "level": 2,
+    "target": "vote"
+  },
+  {
+    "id": "sp3",
+    "text": "Hvem ville være bedst på en første date? Gruppen peger. Vinderen må give 2 slurke ud.",
+    "category": "spicy",
+    "level": 2,
     "target": "vote"
   },
   {
     "id": "sp4",
-    "text": "Fortæl om din mest pinlige date.",
+    "text": "{NAME} fortæller om sin mest pinlige date eller tager 3 slurke.",
     "category": "spicy",
     "level": 3,
     "target": "one"
   },
   {
     "id": "sp5",
-    "text": "Hvem svarer langsomst på beskeder?",
+    "text": "Alle peger på den der svarer langsomst på beskeder. Personen tager 2 slurke.",
     "category": "spicy",
     "level": 2,
-    "target": "all"
+    "target": "vote"
   },
   {
     "id": "sp6",
-    "text": "{NAME} nævn den mest attraktive kendis efter din mening.",
+    "text": "{NAME} nævner en egenskab de finder attraktiv. {NAME2} skal gætte om gruppen er enig. Forkert = 2 slurke.",
     "category": "spicy",
     "level": 2,
     "target": "one"
   },
   {
     "id": "sp7",
-    "text": "Alle peger på den person der mest sandsynligt bliver gift først.",
+    "text": "Alle peger på den der mest sandsynligt bliver gift først. Personen tager 2 slurke.",
     "category": "spicy",
     "level": 2,
     "target": "vote"
   },
   {
     "id": "sp8",
-    "text": "Hvem i rummet ville være den bedste kæreste?",
+    "text": "Alle peger på den der ville være den bedste kæreste. Personen må give 2 slurke ud.",
     "category": "spicy",
     "level": 2,
     "target": "vote"
   },
   {
     "id": "sp9",
-    "text": "{NAME} fortæl om den værste pickup line du har hørt.",
+    "text": "{NAME} fortæller den værste pickup line de har hørt. Hvis gruppen griner, tager {NAME2} 2 slurke.",
     "category": "spicy",
     "level": 2,
     "target": "one"
   },
   {
     "id": "sp10",
-    "text": "Alle der har været forelskede mere end 3 gange tager 1 slurk.",
+    "text": "Alle der har været forelskede mere end tre gange tager 2 slurke.",
     "category": "spicy",
     "level": 2,
     "target": "all"
   },
   {
     "id": "sp11",
-    "text": "Hvem er mest sandsynlig til at sende en besked klokken 03 om natten?",
+    "text": "Alle peger på den mest sandsynlige til at sende en besked klokken 03. Personen tager 2 slurke.",
     "category": "spicy",
     "level": 2,
     "target": "vote"
   },
   {
     "id": "sp12",
-    "text": "{NAME} hvad er det sødeste nogen har gjort for dig?",
+    "text": "{NAME} fortæller det sødeste nogen har gjort for dem. {NAME2} vurderer om det var romantisk eller cringe.",
     "category": "spicy",
     "level": 2,
     "target": "one"
   },
   {
     "id": "sp13",
-    "text": "Alle peger på den person der får mest opmærksomhed på sociale medier.",
+    "text": "Alle peger på den der får mest opmærksomhed på sociale medier. Personen tager 2 slurke.",
     "category": "spicy",
     "level": 2,
     "target": "vote"
   },
   {
     "id": "sp14",
-    "text": "Fortæl om dit mest akavede øjeblik med en person du kunne lide.",
+    "text": "{NAME} fortæller om et akavet øjeblik med en person de kunne lide eller tager 3 slurke.",
     "category": "spicy",
     "level": 3,
     "target": "one"
   },
   {
     "id": "sp15",
-    "text": "Hvem ville være den værste ekskæreste?",
+    "text": "Alle peger på den der ville være den værste eks. Personen tager 3 slurke.",
     "category": "spicy",
     "level": 3,
     "target": "vote"
   },
   {
     "id": "sp16",
-    "text": "{NAME} nævn en egenskab du finder attraktiv.",
+    "text": "{NAME} nævner sit største turn-off. Hvis {NAME2} er enig, tager gruppen 2 slurke.",
     "category": "spicy",
-    "level": 2,
+    "level": 3,
     "target": "one"
   },
   {
     "id": "sp17",
-    "text": "Alle peger på den mest romantiske spiller.",
+    "text": "Alle peger på den mest romantiske spiller. Personen må give 2 slurke ud.",
     "category": "spicy",
     "level": 2,
     "target": "vote"
   },
   {
     "id": "sp18",
-    "text": "Hvem ville mest sandsynligt skrive en kærlighedssang?",
+    "text": "Alle peger på den der mest sandsynligt ville skrive en kærlighedssang. Personen tager 2 slurke.",
     "category": "spicy",
     "level": 2,
     "target": "vote"
   },
   {
     "id": "sp19",
-    "text": "{NAME} fortæl om dit første crush.",
+    "text": "{NAME} fortæller om sit første crush eller tager 3 slurke.",
     "category": "spicy",
     "level": 3,
     "target": "one"
   },
   {
     "id": "sp20",
-    "text": "Hvem ville være den bedste wingman eller wingwoman?",
+    "text": "Alle peger på den bedste wingman eller wingwoman. Personen må give 2 slurke ud.",
     "category": "spicy",
     "level": 2,
     "target": "vote"
   },
   {
     "id": "sp21",
-    "text": "Alle der har sendt et hjerte i dag tager 1 slurk.",
+    "text": "Alle der har sendt et hjerte i dag tager 2 slurke.",
     "category": "spicy",
     "level": 1,
     "target": "all"
   },
   {
     "id": "sp22",
-    "text": "{NAME} hvem ville du tage med på en luksusferie?",
+    "text": "{NAME} vælger hvem de ville tage med på en luksusferie. {NAME2} tager 2 slurke hvis de ikke blev valgt.",
     "category": "spicy",
     "level": 2,
     "target": "one"
   },
   {
     "id": "sp23",
-    "text": "Alle peger på den mest charmerende spiller.",
+    "text": "Alle peger på den mest charmerende spiller. Personen tager 2 slurke.",
     "category": "spicy",
     "level": 2,
     "target": "vote"
   },
   {
     "id": "sp24",
-    "text": "Fortæl om din værste dating-fejl.",
+    "text": "{NAME} fortæller om sin værste dating-fejl eller tager 3 slurke.",
     "category": "spicy",
     "level": 3,
     "target": "one"
   },
   {
     "id": "sp25",
-    "text": "Hvem ville få flest matches på en datingside?",
+    "text": "Alle peger på den der ville få flest matches på en datingapp. Personen må give 3 slurke ud.",
     "category": "spicy",
     "level": 3,
     "target": "vote"
   },
   {
     "id": "sp26",
-    "text": "{NAME} hvad er dit største turn-off?",
+    "text": "{NAME} nævner en ting der gør nogen ekstra attraktiv. {NAME2} skal være enig eller tage 2 slurke.",
     "category": "spicy",
-    "level": 3,
+    "level": 2,
     "target": "one"
   },
   {
     "id": "sp27",
-    "text": "Alle peger på den spiller der er sværest at læse.",
+    "text": "Alle peger på den spiller der er sværest at læse. Personen tager 2 slurke.",
     "category": "spicy",
     "level": 2,
     "target": "vote"
   },
   {
     "id": "sp28",
-    "text": "Hvem er mest sandsynlig til at blive forelsket først?",
+    "text": "Alle peger på den mest sandsynlige til at blive forelsket først. Personen tager 2 slurke.",
     "category": "spicy",
     "level": 2,
     "target": "vote"
   },
   {
     "id": "sp29",
-    "text": "{NAME} fortæl om din mest pinlige besked.",
+    "text": "{NAME} fortæller om en pinlig besked de har sendt. Hvis de nægter, tager {NAME2} 2 slurke og vælger en ny straf til {NAME}.",
     "category": "spicy",
     "level": 3,
     "target": "one"
   },
   {
     "id": "sp30",
-    "text": "Alle peger på den mest jaloux spiller.",
+    "text": "Alle peger på den mest jaloux spiller. Personen tager 3 slurke.",
     "category": "spicy",
     "level": 3,
     "target": "vote"
   },
   {
     "id": "sp31",
-    "text": "Hvem ville være bedst i et reality-datingprogram?",
+    "text": "Alle peger på den der ville klare sig bedst i et dating-realityshow. Personen tager 2 slurke.",
     "category": "spicy",
     "level": 2,
     "target": "vote"
   },
   {
     "id": "sp32",
-    "text": "{NAME} hvad er det mest romantiske du har gjort?",
+    "text": "{NAME} fortæller det mest romantiske de har gjort. {NAME2} giver en score fra 1 til 10.",
     "category": "spicy",
     "level": 3,
     "target": "one"
   },
   {
     "id": "sp33",
-    "text": "Alle peger på den mest mystiske spiller.",
+    "text": "Alle peger på den mest mystiske spiller. Personen tager 2 slurke.",
     "category": "spicy",
     "level": 2,
     "target": "vote"
   },
   {
     "id": "sp34",
-    "text": "Hvem ville være sværest at sige nej til?",
+    "text": "Alle peger på den der ville være sværest at sige nej til. Personen må give 3 slurke ud.",
     "category": "spicy",
     "level": 3,
     "target": "vote"
   },
   {
     "id": "sp35",
-    "text": "{NAME} fortæl om din værste flirt.",
+    "text": "{NAME} fortæller om sin værste flirt eller tager 3 slurke. {NAME2} må bedømme flirten.",
     "category": "spicy",
     "level": 3,
     "target": "one"
   },
   {
     "id": "sp36",
-    "text": "Alle peger på den spiller der får flest komplimenter.",
+    "text": "Alle peger på den der får flest komplimenter. Personen tager 2 slurke.",
     "category": "spicy",
     "level": 2,
     "target": "vote"
   },
   {
     "id": "sp37",
-    "text": "Hvem ville være mest sandsynlig til at skrive et kærlighedsbrev?",
+    "text": "Alle peger på den mest sandsynlige til at skrive et kærlighedsbrev. Personen tager 2 slurke.",
     "category": "spicy",
     "level": 2,
     "target": "vote"
   },
   {
     "id": "sp38",
-    "text": "{NAME} nævn en ting der gør nogen ekstra attraktive.",
+    "text": "{NAME} vælger den bedste date-idé. Hvis {NAME2} ikke godkender den, tager {NAME} 2 slurke.",
     "category": "spicy",
     "level": 2,
     "target": "one"
   },
   {
     "id": "sp39",
-    "text": "Alle peger på den spiller der er bedst til at flirte.",
+    "text": "Alle peger på den der er bedst til at flirte. Personen må give 3 slurke ud.",
     "category": "spicy",
     "level": 3,
     "target": "vote"
   },
   {
     "id": "sp40",
-    "text": "Hvem ville være mest sandsynlig til at blive kendt på grund af sit udseende?",
+    "text": "Alle peger på den mest selvsikre spiller. Personen tager 2 slurke.",
     "category": "spicy",
-    "level": 3,
+    "level": 2,
     "target": "vote"
   },
   {
     "id": "sp41",
-    "text": "{NAME} fortæl om din mest akavede kompliment.",
+    "text": "{NAME} fortæller om et akavet kompliment eller tager 3 slurke. {NAME2} må give et bedre kompliment.",
     "category": "spicy",
     "level": 3,
     "target": "one"
   },
   {
     "id": "sp42",
-    "text": "Alle peger på den spiller der er mest selvsikker.",
+    "text": "Alle peger på den mest eventyrlystne spiller. Personen tager 2 slurke.",
     "category": "spicy",
     "level": 2,
     "target": "vote"
   },
   {
     "id": "sp43",
-    "text": "Hvem ville være bedst til speed dating?",
+    "text": "Alle peger på den der ville være bedst til speed dating. Personen tager 2 slurke.",
     "category": "spicy",
     "level": 2,
     "target": "vote"
   },
   {
     "id": "sp44",
-    "text": "{NAME} hvad er din værste date-idé?",
+    "text": "{NAME} fortæller deres værste date-idé. {NAME2} skal forbedre den eller tage 2 slurke.",
     "category": "spicy",
     "level": 2,
     "target": "one"
   },
   {
     "id": "sp45",
-    "text": "Alle peger på den spiller der er mest tilbøjelig til at falde for en dårlig idé.",
+    "text": "Alle peger på den der er mest tilbøjelig til at falde for en dårlig idé. Personen tager 2 slurke.",
     "category": "spicy",
     "level": 2,
     "target": "vote"
   },
   {
     "id": "sp46",
-    "text": "Hvem ville være mest sandsynlig til at skrive først efter en date?",
+    "text": "Alle peger på den der ville skrive først efter en date. Personen tager 2 slurke.",
     "category": "spicy",
     "level": 2,
     "target": "vote"
   },
   {
     "id": "sp47",
-    "text": "{NAME} fortæl om den værste gave du har modtaget.",
+    "text": "{NAME} fortæller om den værste gave de har modtaget. {NAME2} skal gætte hvem den var fra.",
     "category": "spicy",
     "level": 2,
     "target": "one"
   },
   {
     "id": "sp48",
-    "text": "Alle peger på den mest eventyrlystne spiller.",
+    "text": "Alle peger på den mest intense flirter. Personen tager 3 slurke.",
     "category": "spicy",
-    "level": 2,
+    "level": 3,
     "target": "vote"
   },
   {
     "id": "sp49",
-    "text": "Hvem ville være mest sandsynlig til at blive forelsket på første date?",
+    "text": "Alle peger på den mest sandsynlige til at blive forelsket på første date. Personen tager 3 slurke.",
     "category": "spicy",
     "level": 3,
     "target": "vote"
   },
   {
     "id": "sp50",
-    "text": "Alle tager 1 slurk for deres værste dating-beslutning.",
+    "text": "Alle tager 2 slurke for deres værste dating-beslutning.",
     "category": "spicy",
     "level": 2,
     "target": "all"

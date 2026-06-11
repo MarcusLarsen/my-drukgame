@@ -61,26 +61,52 @@ type SessionState = {
   removeCustomCard: (id: string) => void;
 };
 
-function prepareCard(card: Card | undefined, players: Player[]): Card | null {
+function prepareCard(
+  card: Card | undefined,
+  players: Player[]
+): Card | null {
   if (!card) return null;
 
   let text = card.text;
 
-  if (text.includes('{NAME2}') && players.length >= 2) {
-    const shuffled = [...players].sort(() => Math.random() - 0.5);
+  if (players.length > 0) {
+    const shuffled = [...players].sort(
+      () => Math.random() - 0.5
+    );
+
+    const p1 = shuffled[0];
+    const p2 = shuffled[1] ?? shuffled[0];
+    const p3 = shuffled[2] ?? shuffled[0];
 
     text = text
-      .replace('{NAME}', shuffled[0].name)
-      .replace('{NAME2}', shuffled[1].name);
-  } else if (text.includes('{NAME}') && players.length > 0) {
-    const p = players[Math.floor(Math.random() * players.length)];
-    text = text.replace('{NAME}', p.name);
+      .replaceAll('{NAME}', p1.name)
+      .replaceAll('{NAME2}', p2.name)
+      .replaceAll('{NAME3}', p3.name);
   }
 
   return {
     ...card,
     text,
   };
+}
+
+function prepareChaosText(text: string, players: Player[]): string {
+  if (players.length === 0) return text;
+
+  if (text.includes('{NAME2}') && players.length >= 2) {
+    const shuffled = [...players].sort(() => Math.random() - 0.5);
+
+    return text
+      .replace('{NAME}', shuffled[0].name)
+      .replace('{NAME2}', shuffled[1].name);
+  }
+
+  if (text.includes('{NAME}')) {
+    const p = players[Math.floor(Math.random() * players.length)];
+    return text.replace('{NAME}', p.name);
+  }
+
+  return text;
 }
 
 export const useSession = create<SessionState>()(
@@ -116,12 +142,15 @@ export const useSession = create<SessionState>()(
 
       loadDeck: (cards) => {
         const shuffled = [...cards].sort(() => Math.random() - 0.5);
-        const firstCard = prepareCard(shuffled[0], get().players);
+
+        const preparedDeck = shuffled.map((card) =>
+          prepareCard(card, get().players)
+        ).filter((card): card is Card => card !== null);
 
         set({
-          deck: shuffled,
+          deck: preparedDeck,
           currentIndex: 0,
-          currentCard: firstCard,
+          currentCard: preparedDeck[0] ?? null,
           history: [],
           chaosRules: [],
           started: true,
@@ -132,7 +161,7 @@ export const useSession = create<SessionState>()(
         const s = get();
 
         const nextIndex = s.currentIndex + 1;
-        const nextCard = prepareCard(s.deck[nextIndex], s.players);
+        const nextCard = s.deck[nextIndex] ?? null;
 
         set({
           history: [
@@ -161,12 +190,11 @@ export const useSession = create<SessionState>()(
           if (s.currentIndex === 0) return s;
 
           const previousIndex = s.currentIndex - 1;
-          const previousCard = prepareCard(s.deck[previousIndex], s.players);
 
           return {
             ...s,
             currentIndex: previousIndex,
-            currentCard: previousCard,
+            currentCard: s.deck[previousIndex] ?? null,
             history: s.history.slice(0, -1),
           };
         }),
@@ -186,7 +214,13 @@ export const useSession = create<SessionState>()(
 
       addChaosRule: (rule) =>
         set((s) => ({
-          chaosRules: [...s.chaosRules, rule],
+          chaosRules: [
+            ...s.chaosRules,
+            {
+              ...rule,
+              text: prepareChaosText(rule.text, s.players),
+            },
+          ],
         })),
 
       addCustomCard: (card) =>
@@ -200,7 +234,7 @@ export const useSession = create<SessionState>()(
         })),
     }),
     {
-      name: 'drukgame-session',
+      name: 'drukgame-session-v2',
       partialize: (state) => ({
         players: state.players,
         customCards: state.customCards,

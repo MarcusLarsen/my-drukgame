@@ -4,7 +4,7 @@ import { useSession } from '../store/session';
 import soft from '../data/deck/soft.json';
 import party from '../data/deck/party.json';
 import spicy from '../data/deck/spicy.json';
-import duel from '../data/deck/dual.json';
+import duel from '../data/deck/duel.json';
 import type { Action, Card, ChaosRule } from '../store/session';
 import {
   commonChaosRules,
@@ -33,7 +33,7 @@ function createChaosRule(): ChaosRule | null {
     return {
       id: crypto.randomUUID(),
       text,
-      turnsLeft: 4,
+      turnsLeft: 5,
       rarity: 'legendary',
     };
   }
@@ -45,7 +45,7 @@ function createChaosRule(): ChaosRule | null {
     return {
       id: crypto.randomUUID(),
       text,
-      turnsLeft: 3,
+      turnsLeft: 4,
       rarity: 'rare',
     };
   }
@@ -56,7 +56,7 @@ function createChaosRule(): ChaosRule | null {
   return {
     id: crypto.randomUUID(),
     text,
-    turnsLeft: 2,
+    turnsLeft: 3,
     rarity: 'common',
   };
 }
@@ -96,8 +96,12 @@ export default function GameScreen() {
         );
       }
 
-      if (mode === 'normal' || mode === 'chaos') {
+      if (mode === 'normal') {
         filtered = fullDeck.filter((c) => c.category !== 'spicy');
+      }
+
+      if (mode === 'chaos') {
+        filtered = fullDeck.filter((c) => c.category !== 'soft');
       }
 
       loadDeck(filtered);

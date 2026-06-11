@@ -1,245 +1,245 @@
 [
   {
     "id": "p1",
-    "text": "{NAME} vælg en spiller der tager 2 slurke.",
+    "text": "{NAME} vælg en spiller. {NAME2} skal fortælle en hurtig fun fact om sig selv eller tage 2 slurke.",
     "category": "party",
     "level": 1,
     "target": "one"
   },
   {
     "id": "p2",
-    "text": "Peg på den sjoveste spiller. Personen tager 2 slurke.",
+    "text": "Alle peger på den spiller med den bedste humor. Vinderen deler 2 slurke ud.",
     "category": "party",
     "level": 1,
     "target": "vote"
   },
   {
     "id": "p3",
-    "text": "Fortæl en sjov historie eller tag 2 slurke.",
+    "text": "{NAME} fortæller en historie på 20 sekunder hvor {NAME2} indgår. Hvis {NAME} går i stå, tager {NAME3} 2 slurke.",
     "category": "party",
     "level": 2,
     "target": "one"
   },
   {
     "id": "p4",
-    "text": "Tal med accent indtil din næste tur.",
+    "text": "Ny regel i 3 runder: Ingen må sige ordet “ja”. Glemmer man det, tager man 2 slurke.",
     "category": "party",
     "level": 2,
-    "target": "all"
+    "target": "rule"
   },
   {
     "id": "p5",
-    "text": "Alle skåler.",
+    "text": "Alle skåler med personen til venstre.",
     "category": "party",
     "level": 1,
     "target": "all"
   },
   {
     "id": "p6",
-    "text": "Sten-saks-papir mod sidemanden. Taberen drikker.",
+    "text": "{NAME} og {NAME2} spiller sten-saks-papir. Taberen tager 2 slurke.",
     "category": "party",
     "level": 1,
-    "target": "one"
+    "target": "duel"
   },
   {
     "id": "p7",
-    "text": "{NAME} skal synge omkvædet fra en sang.",
+    "text": "{NAME} skal nynne en kendt sang. {NAME2} må gætte først. Forkert gæt = {NAME2} tager 2 slurke.",
     "category": "party",
     "level": 2,
     "target": "one"
   },
   {
     "id": "p8",
-    "text": "Alle peger på den mest konkurrencemindede spiller.",
+    "text": "Alle peger på den mest konkurrencemindede spiller. Personen tager 2 slurke.",
     "category": "party",
     "level": 1,
     "target": "vote"
   },
   {
     "id": "p9",
-    "text": "Den der sidder længst væk fra dig tager 2 slurke.",
+    "text": "{NAME} vælger den spiller der sidder længst væk. Den spiller tager 2 slurke.",
     "category": "party",
     "level": 1,
     "target": "one"
   },
   {
     "id": "p10",
-    "text": "Alle skal highfive personen til højre.",
+    "text": "Alle skal give et kompliment til personen til højre. Den der tøver længst tager 2 slurke.",
     "category": "party",
     "level": 1,
     "target": "all"
   },
   {
     "id": "p11",
-    "text": "Fortæl en joke. Hvis ingen griner, tag 2 slurke.",
+    "text": "{NAME} fortæller en joke. Hvis ingen griner, tager {NAME} 2 slurke. Hvis folk griner, tager {NAME2} 2 slurke.",
     "category": "party",
     "level": 2,
     "target": "one"
   },
   {
     "id": "p12",
-    "text": "Alle der har været forsinket i denne uge tager 1 slurk.",
+    "text": "Alle der er kommet for sent til noget i denne uge tager 2 slurke.",
     "category": "party",
     "level": 1,
     "target": "all"
   },
   {
     "id": "p13",
-    "text": "{NAME} vælg et dyr. Alle skal efterligne det.",
+    "text": "{NAME} vælger et dyr. {NAME2} skal efterligne det. Dårlig imitation = 2 slurke.",
     "category": "party",
     "level": 2,
-    "target": "all"
+    "target": "one"
   },
   {
     "id": "p14",
-    "text": "Den mest højlydte spiller tager 2 slurke.",
+    "text": "Alle peger på den mest højlydte spiller. Personen tager 2 slurke.",
     "category": "party",
     "level": 1,
     "target": "vote"
   },
   {
     "id": "p15",
-    "text": "Alle siger deres yndlingsfilm. Den sidste drikker.",
+    "text": "Kategori: film. {NAME} starter, derefter går turen rundt. Første der går i stå tager 2 slurke.",
     "category": "party",
     "level": 2,
     "target": "all"
   },
   {
     "id": "p16",
-    "text": "{NAME} må ikke sige ja i 3 ture.",
+    "text": "Ny regel i 3 runder: Alle skal drikke med den modsatte hånd.",
     "category": "party",
     "level": 2,
     "target": "rule"
   },
   {
     "id": "p17",
-    "text": "Alle der spiller computer mindst 3 gange om ugen tager 1 slurk.",
+    "text": "Alle der har spillet computer eller konsol denne uge tager 2 slurke.",
     "category": "party",
     "level": 1,
     "target": "all"
   },
   {
     "id": "p18",
-    "text": "Peg på den spiller der mest sandsynligt ville vinde Paradise Hotel.",
+    "text": "Alle peger på den der mest sandsynligt ville vinde et realityshow. Personen tager 2 slurke.",
     "category": "party",
     "level": 2,
     "target": "vote"
   },
   {
     "id": "p19",
-    "text": "{NAME} skal tale som en robot indtil næste tur.",
+    "text": "{NAME} skal tale som en robot indtil næste kort. Fejl = 2 slurke.",
     "category": "party",
     "level": 2,
     "target": "rule"
   },
   {
     "id": "p20",
-    "text": "Alle tager en slurk med venstre hånd.",
+    "text": "Alle tager en fælles skål. Sidste person der løfter glasset tager 2 ekstra slurke.",
     "category": "party",
     "level": 1,
     "target": "all"
   },
   {
     "id": "p21",
-    "text": "Den der har flest apps på telefonen tager 2 slurke.",
+    "text": "{NAME} og {NAME2}: Den med flest apps på telefonen tager 2 slurke.",
     "category": "party",
     "level": 1,
-    "target": "one"
+    "target": "duel"
   },
   {
     "id": "p22",
-    "text": "Alle skal sige et land. Den første der ikke kan, drikker.",
+    "text": "Kategori: lande. {NAME2} starter. Gentagelse eller pause over 3 sekunder = 2 slurke.",
     "category": "party",
     "level": 2,
     "target": "all"
   },
   {
     "id": "p23",
-    "text": "{NAME} vælg en spiller der skal fortælle en pinlig historie.",
+    "text": "{NAME} vælger en spiller der skal fortælle om en pinlig fejl de har lavet.",
     "category": "party",
     "level": 2,
     "target": "one"
   },
   {
     "id": "p24",
-    "text": "Alle peger på den mest dramatiske spiller.",
+    "text": "Alle peger på den mest dramatiske spiller. Personen skal lave en dramatisk entré eller tage 2 slurke.",
     "category": "party",
     "level": 1,
     "target": "vote"
   },
   {
     "id": "p25",
-    "text": "Den der senest har sendt en selfie tager 2 slurke.",
+    "text": "{NAME} vælger hvem der senest har taget en selfie. Den valgte tager 2 slurke.",
     "category": "party",
     "level": 1,
     "target": "one"
   },
   {
     "id": "p26",
-    "text": "Alle skal lave deres bedste TikTok-dans i 5 sekunder.",
+    "text": "Alle laver deres bedste danse-move i 5 sekunder. {NAME} vælger den mest energiløse, som tager 2 slurke.",
     "category": "party",
     "level": 2,
     "target": "all"
   },
   {
     "id": "p27",
-    "text": "{NAME} vælg et ord. Ingen må sige det i 3 ture.",
+    "text": "{NAME} vælger et forbudt ord. Reglen gælder i 3 runder. Siger man ordet, tager man 2 slurke.",
     "category": "party",
     "level": 2,
     "target": "rule"
   },
   {
     "id": "p28",
-    "text": "Den spiller med flest nøgler i lommen tager 1 slurk.",
+    "text": "{NAME} og {NAME2}: Den med flest nøgler på sig tager 2 slurke. Ved uafgjort tager begge 2.",
     "category": "party",
     "level": 1,
-    "target": "one"
+    "target": "duel"
   },
   {
     "id": "p29",
-    "text": "Alle peger på den bedste chauffør.",
+    "text": "Alle peger på den bedste chauffør. Vinderen må give 2 slurke ud.",
     "category": "party",
     "level": 1,
     "target": "vote"
   },
   {
     "id": "p30",
-    "text": "Fortæl din mest mærkelige vane.",
+    "text": "{NAME} fortæller en mærkelig vane. Hvis gruppen synes den er normal, tager {NAME2} 2 slurke. Ellers tager {NAME} 2.",
     "category": "party",
     "level": 2,
     "target": "one"
   },
   {
     "id": "p31",
-    "text": "Alle skal sige et dyr. Den første der gentager et dyr drikker.",
+    "text": "Kategori: dyr. {NAME} starter. Første gentagelse eller tomgang tager 2 slurke.",
     "category": "party",
     "level": 2,
     "target": "all"
   },
   {
     "id": "p32",
-    "text": "{NAME} vælg hvem der har den bedste humor.",
+    "text": "{NAME} vælger hvem der har den bedste humor. Den valgte må give 2 slurke ud.",
     "category": "party",
     "level": 1,
     "target": "vote"
   },
   {
     "id": "p33",
-    "text": "Alle der har været vågne efter kl. 3 i denne uge tager 1 slurk.",
+    "text": "Alle der har været vågne efter kl. 03 i denne uge tager 2 slurke.",
     "category": "party",
     "level": 1,
     "target": "all"
   },
   {
     "id": "p34",
-    "text": "Den der bruger mest tid på sociale medier tager 2 slurke.",
+    "text": "Alle peger på den der bruger mest tid på sociale medier. Personen tager 2 slurke.",
     "category": "party",
     "level": 1,
     "target": "vote"
   },
   {
     "id": "p35",
-    "text": "{NAME} skal mime en film. Den der gætter den får frit valg.",
+    "text": "{NAME} mimer en film. Hvis ingen gætter den på 20 sekunder, tager {NAME2} 2 slurke.",
     "category": "party",
     "level": 2,
     "target": "one"
@@ -253,98 +253,98 @@
   },
   {
     "id": "p37",
-    "text": "Peg på den mest stædige spiller.",
+    "text": "Alle peger på den mest stædige spiller. Personen skal sige “jeg tager aldrig fejl” eller tage 2 slurke.",
     "category": "party",
     "level": 1,
     "target": "vote"
   },
   {
     "id": "p38",
-    "text": "Den første der griner tager 1 slurk.",
+    "text": "Alle skal være helt stille i 10 sekunder. Første der griner eller snakker tager 2 slurke.",
     "category": "party",
     "level": 1,
     "target": "all"
   },
   {
     "id": "p39",
-    "text": "{NAME} må kun tale i spørgsmål indtil næste tur.",
+    "text": "{NAME} må kun tale i spørgsmål indtil næste kort. Fejl = 2 slurke.",
     "category": "party",
     "level": 3,
     "target": "rule"
   },
   {
     "id": "p40",
-    "text": "Alle tager 2 slurke hvis de nogensinde har sovet over sig til noget vigtigt.",
+    "text": "Alle der nogensinde har sovet over sig til noget vigtigt tager 2 slurke.",
     "category": "party",
     "level": 1,
     "target": "all"
   },
   {
     "id": "p41",
-    "text": "Peg på den spiller der mest sandsynligt ville blive kendt.",
+    "text": "Alle peger på den mest sandsynlige kommende kendis. Personen holder en takketale eller tager 2 slurke.",
     "category": "party",
     "level": 2,
     "target": "vote"
   },
   {
     "id": "p42",
-    "text": "{NAME} vælg en spiller der skal fortælle sit første job.",
+    "text": "{NAME} vælger en spiller der skal fortælle om sit første job eller første fritidsjob.",
     "category": "party",
     "level": 1,
     "target": "one"
   },
   {
     "id": "p43",
-    "text": "Alle skal lave deres bedste djungellyd.",
+    "text": "Alle laver deres bedste jungellyd. {NAME} vælger den svageste lyd, som tager 2 slurke.",
     "category": "party",
     "level": 2,
     "target": "all"
   },
   {
     "id": "p44",
-    "text": "Den der har flest billeder på telefonen tager 2 slurke.",
+    "text": "{NAME} og {NAME2}: Den med flest billeder på telefonen tager 2 slurke. Hvis ingen vil tjekke, tager begge 2.",
     "category": "party",
     "level": 1,
-    "target": "one"
+    "target": "duel"
   },
   {
     "id": "p45",
-    "text": "Alle peger på den mest kreative spiller.",
+    "text": "Alle peger på den mest kreative spiller. Personen finder på en mini-regel for næste runde.",
     "category": "party",
     "level": 1,
     "target": "vote"
   },
   {
     "id": "p46",
-    "text": "{NAME} skal nævne 5 bilmærker på 10 sekunder.",
+    "text": "{NAME} skal nævne 5 bilmærker på 10 sekunder. Fejl = {NAME2} giver {NAME} 2 slurke.",
     "category": "party",
     "level": 2,
     "target": "one"
   },
   {
     "id": "p47",
-    "text": "Alle skal skåle med personen overfor.",
+    "text": "Alle skåler med personen overfor. Hvis der ikke er en overfor, vælg frit.",
     "category": "party",
     "level": 1,
     "target": "all"
   },
   {
     "id": "p48",
-    "text": "Peg på den spiller der mest sandsynligt ville glemme sin egen fødselsdag.",
+    "text": "Alle peger på den der mest sandsynligt ville glemme sin egen fødselsdag. Personen tager 2 slurke.",
     "category": "party",
     "level": 2,
     "target": "vote"
   },
   {
     "id": "p49",
-    "text": "{NAME} vælg en spiller der tager 3 slurke.",
+    "text": "{NAME} vælger om {NAME2} skal tage 3 slurke eller udføre en valgfri udfordring fra gruppen.",
     "category": "party",
     "level": 3,
     "target": "one"
   },
   {
     "id": "p50",
-    "text": "Alle tager 1 slurk og skåler for værten.",
+    "text": "Alle tager 2 slurke og siger én ting de glæder sig til.",
     "category": "party",
     "level": 1,
     "target": "all"
