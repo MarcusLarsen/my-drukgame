@@ -2,6 +2,7 @@ import GameScreen from './components/GameScreen';
 import SetupScreen from './components/SetupScreen';
 import ModeSelectScreen from './components/ModeSelectScreen';
 import BottleSpinScreen from './components/BottleSpinScreen';
+import BottleModeSelectScreen from './components/BottleModeSelectScreen';
 import { useSession } from './store/session';
 
 function App() {
@@ -16,6 +17,9 @@ function App() {
 
     case 'game':
       return <GameScreen />;
+
+    case 'bottleMode':
+      return <BottleModeSelectScreen />;
 
     case 'bottle':
       return <BottleSpinScreen />;

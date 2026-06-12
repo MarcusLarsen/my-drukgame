@@ -45,7 +45,7 @@ export default function ModeSelectScreen() {
         </button>
 
         <button
-          onClick={() => setScreen('bottle')}
+          onClick={() => setScreen('bottleMode')}
           className="bg-blue-600 hover:bg-blue-500 transition p-5 rounded-2xl font-black text-xl"
         >
           🍾 Flaskehalsen peger på

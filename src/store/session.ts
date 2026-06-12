@@ -29,12 +29,27 @@ type HistoryItem = {
   playerIds?: string[];
 };
 
-export type Screen = 'setup' | 'mode' | 'game' | 'bottle';
+export type Screen =
+  | 'setup'
+  | 'mode'
+  | 'game'
+  | 'bottleMode'
+  | 'bottle';
+
 export type GameMode = 'normal' | 'chaos' | 'spicy';
+
+export type BottleMode =
+  | 'truth'
+  | 'dare'
+  | 'truthOrDare'
+  | 'challenge'
+  | 'drink'
+  | 'dating';
 
 type SessionState = {
   screen: Screen;
   gameMode: GameMode;
+  bottleMode: BottleMode;
   started: boolean;
 
   players: Player[];
@@ -49,6 +64,7 @@ type SessionState = {
 
   setScreen: (screen: Screen) => void;
   setGameMode: (mode: GameMode) => void;
+  setBottleMode: (mode: BottleMode) => void;
   setPlayers: (names: string[]) => void;
 
   loadDeck: (cards: Card[]) => void;
@@ -93,20 +109,16 @@ function prepareCard(
 function prepareChaosText(text: string, players: Player[]): string {
   if (players.length === 0) return text;
 
-  if (text.includes('{NAME2}') && players.length >= 2) {
-    const shuffled = [...players].sort(() => Math.random() - 0.5);
+  const shuffled = [...players].sort(() => Math.random() - 0.5);
 
-    return text
-      .replace('{NAME}', shuffled[0].name)
-      .replace('{NAME2}', shuffled[1].name);
-  }
+  const p1 = shuffled[0];
+  const p2 = shuffled[1] ?? shuffled[0];
+  const p3 = shuffled[2] ?? shuffled[0];
 
-  if (text.includes('{NAME}')) {
-    const p = players[Math.floor(Math.random() * players.length)];
-    return text.replace('{NAME}', p.name);
-  }
-
-  return text;
+  return text
+    .replaceAll('{NAME}', p1.name)
+    .replaceAll('{NAME2}', p2.name)
+    .replaceAll('{NAME3}', p3.name);
 }
 
 export const useSession = create<SessionState>()(
@@ -114,6 +126,7 @@ export const useSession = create<SessionState>()(
     (set, get) => ({
       screen: 'setup',
       gameMode: 'normal',
+      bottleMode: 'truth',
       started: false,
 
       players: [],
@@ -130,6 +143,8 @@ export const useSession = create<SessionState>()(
 
       setGameMode: (gameMode) => set({ gameMode }),
 
+      setBottleMode: (bottleMode) => set({ bottleMode }),
+
       setPlayers: (names) =>
         set({
           players: names
@@ -143,9 +158,9 @@ export const useSession = create<SessionState>()(
       loadDeck: (cards) => {
         const shuffled = [...cards].sort(() => Math.random() - 0.5);
 
-        const preparedDeck = shuffled.map((card) =>
-          prepareCard(card, get().players)
-        ).filter((card): card is Card => card !== null);
+        const preparedDeck = shuffled
+          .map((card) => prepareCard(card, get().players))
+          .filter((card): card is Card => card !== null);
 
         set({
           deck: preparedDeck,
@@ -234,10 +249,11 @@ export const useSession = create<SessionState>()(
         })),
     }),
     {
-      name: 'drukgame-session-v2',
+      name: 'drukgame-session-v3',
       partialize: (state) => ({
         players: state.players,
         customCards: state.customCards,
+        bottleMode: state.bottleMode,
       }),
     }
   )
