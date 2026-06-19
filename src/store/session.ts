@@ -23,6 +23,17 @@ export type ChaosRule = {
   rarity: 'common' | 'rare' | 'legendary';
 };
 
+export type CustomBottlePrompt = {
+  id: string;
+  text: string;
+  category:
+    | 'truth'
+    | 'dare'
+    | 'challenge'
+    | 'drink'
+    | 'dating';
+};
+
 type HistoryItem = {
   cardId: string;
   action: Action;
@@ -34,7 +45,8 @@ export type Screen =
   | 'mode'
   | 'game'
   | 'bottleMode'
-  | 'bottle';
+  | 'bottle'
+  | 'king';
 
 export type GameMode = 'normal' | 'chaos' | 'spicy';
 
@@ -55,6 +67,7 @@ type SessionState = {
   players: Player[];
   deck: Card[];
   customCards: Card[];
+  customBottlePrompts: CustomBottlePrompt[];
 
   currentIndex: number;
   currentCard: Card | null;
@@ -75,6 +88,9 @@ type SessionState = {
   addChaosRule: (rule: ChaosRule) => void;
   addCustomCard: (card: Card) => void;
   removeCustomCard: (id: string) => void;
+
+  addCustomBottlePrompt: (prompt: CustomBottlePrompt) => void;
+  removeCustomBottlePrompt: (id: string) => void;
 };
 
 function prepareCard(
@@ -86,9 +102,7 @@ function prepareCard(
   let text = card.text;
 
   if (players.length > 0) {
-    const shuffled = [...players].sort(
-      () => Math.random() - 0.5
-    );
+    const shuffled = [...players].sort(() => Math.random() - 0.5);
 
     const p1 = shuffled[0];
     const p2 = shuffled[1] ?? shuffled[0];
@@ -132,6 +146,7 @@ export const useSession = create<SessionState>()(
       players: [],
       deck: [],
       customCards: [],
+      customBottlePrompts: [],
 
       currentIndex: 0,
       currentCard: null,
@@ -247,12 +262,27 @@ export const useSession = create<SessionState>()(
         set((s) => ({
           customCards: s.customCards.filter((c) => c.id !== id),
         })),
+
+      addCustomBottlePrompt: (prompt) =>
+        set((s) => ({
+          customBottlePrompts: [
+            ...s.customBottlePrompts,
+            prompt,
+          ],
+        })),
+
+      removeCustomBottlePrompt: (id) =>
+        set((s) => ({
+          customBottlePrompts:
+            s.customBottlePrompts.filter((p) => p.id !== id),
+        })),
     }),
     {
-      name: 'drukgame-session-v3',
+      name: 'drukgame-session-v5',
       partialize: (state) => ({
         players: state.players,
         customCards: state.customCards,
+        customBottlePrompts: state.customBottlePrompts,
         bottleMode: state.bottleMode,
       }),
     }

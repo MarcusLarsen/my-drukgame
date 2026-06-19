@@ -17,6 +17,9 @@ export default function BottleSpinScreen() {
   const players = useSession((s) => s.players);
   const setScreen = useSession((s) => s.setScreen);
   const bottleMode = useSession((s) => s.bottleMode);
+  const customBottlePrompts = useSession(
+    (s) => s.customBottlePrompts
+  );
 
   const [rotation, setRotation] = useState(0);
   const [selectedPlayer, setSelectedPlayer] =
@@ -26,24 +29,73 @@ export default function BottleSpinScreen() {
   const [truthOrDareChoice, setTruthOrDareChoice] =
     useState<'truth' | 'dare' | null>(null);
 
+  const [lastSelectedIndex, setLastSelectedIndex] =
+    useState<number | null>(null);
+  const [samePlayerCount, setSamePlayerCount] = useState(0);
+
+  function getPromptList(
+    category:
+      | 'truth'
+      | 'dare'
+      | 'challenge'
+      | 'drink'
+      | 'dating'
+  ) {
+    const customPrompts = customBottlePrompts
+      .filter((p) => p.category === category)
+      .map((p) => p.text);
+
+    if (category === 'truth') {
+      return [...truthPrompts, ...customPrompts];
+    }
+
+    if (category === 'dare') {
+      return [...darePrompts, ...customPrompts];
+    }
+
+    if (category === 'challenge') {
+      return [...challengePrompts, ...customPrompts];
+    }
+
+    if (category === 'drink') {
+      return [...drinkPrompts, ...customPrompts];
+    }
+
+    return [...datingPrompts, ...customPrompts];
+  }
+
   function getPrompt() {
-    if (bottleMode === 'truth') return randomFrom(truthPrompts);
-    if (bottleMode === 'dare') return randomFrom(darePrompts);
-    if (bottleMode === 'challenge') return randomFrom(challengePrompts);
-    if (bottleMode === 'drink') return randomFrom(drinkPrompts);
-    if (bottleMode === 'dating') return randomFrom(datingPrompts);
+    if (bottleMode === 'truth') {
+      return randomFrom(getPromptList('truth'));
+    }
+
+    if (bottleMode === 'dare') {
+      return randomFrom(getPromptList('dare'));
+    }
+
+    if (bottleMode === 'challenge') {
+      return randomFrom(getPromptList('challenge'));
+    }
+
+    if (bottleMode === 'drink') {
+      return randomFrom(getPromptList('drink'));
+    }
+
+    if (bottleMode === 'dating') {
+      return randomFrom(getPromptList('dating'));
+    }
 
     return null;
   }
 
   function chooseTruth() {
     setTruthOrDareChoice('truth');
-    setPrompt(randomFrom(truthPrompts));
+    setPrompt(randomFrom(getPromptList('truth')));
   }
 
   function chooseDare() {
     setTruthOrDareChoice('dare');
-    setPrompt(randomFrom(darePrompts));
+    setPrompt(randomFrom(getPromptList('dare')));
   }
 
   function getModeTitle() {
@@ -57,6 +109,27 @@ export default function BottleSpinScreen() {
     return '🍾 Flaskehalsen peger på';
   }
 
+  function getRandomPlayerIndex() {
+    let randomIndex = Math.floor(Math.random() * players.length);
+
+    if (
+      players.length > 1 &&
+      lastSelectedIndex !== null &&
+      samePlayerCount >= 2
+    ) {
+      const availableIndexes = players
+        .map((_, index) => index)
+        .filter((index) => index !== lastSelectedIndex);
+
+      randomIndex =
+        availableIndexes[
+          Math.floor(Math.random() * availableIndexes.length)
+        ];
+    }
+
+    return randomIndex;
+  }
+
   function spinBottle() {
     if (players.length === 0 || isSpinning) return;
 
@@ -65,9 +138,7 @@ export default function BottleSpinScreen() {
     setPrompt(null);
     setTruthOrDareChoice(null);
 
-    const randomIndex = Math.floor(
-      Math.random() * players.length
-    );
+    const randomIndex = getRandomPlayerIndex();
 
     const degreesPerPlayer = 360 / players.length;
     const playerAngle = randomIndex * degreesPerPlayer;
@@ -86,6 +157,13 @@ export default function BottleSpinScreen() {
     setTimeout(() => {
       setSelectedPlayer(players[randomIndex].name);
 
+      if (randomIndex === lastSelectedIndex) {
+        setSamePlayerCount((count) => count + 1);
+      } else {
+        setLastSelectedIndex(randomIndex);
+        setSamePlayerCount(1);
+      }
+
       if (bottleMode !== 'truthOrDare') {
         setPrompt(getPrompt());
       }
@@ -102,8 +180,7 @@ export default function BottleSpinScreen() {
 
       <div className="relative w-80 h-80 rounded-full border border-slate-700 flex items-center justify-center">
         {players.map((player, index) => {
-          const angle =
-            (360 / players.length) * index;
+          const angle = (360 / players.length) * index;
 
           return (
             <div
@@ -135,7 +212,14 @@ export default function BottleSpinScreen() {
             className="w-36 h-36 drop-shadow-2xl"
           >
             <g transform="rotate(0 110 110)">
-              <ellipse cx="110" cy="190" rx="38" ry="8" fill="#000000" opacity="0.25" />
+              <ellipse
+                cx="110"
+                cy="190"
+                rx="38"
+                ry="8"
+                fill="#000000"
+                opacity="0.25"
+              />
 
               <path
                 d="

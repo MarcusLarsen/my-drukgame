@@ -3,6 +3,7 @@ import SetupScreen from './components/SetupScreen';
 import ModeSelectScreen from './components/ModeSelectScreen';
 import BottleSpinScreen from './components/BottleSpinScreen';
 import BottleModeSelectScreen from './components/BottleModeSelectScreen';
+import KingModeScreen from './components/KingModeScreen';
 import { useSession } from './store/session';
 
 function App() {
@@ -23,6 +24,9 @@ function App() {
 
     case 'bottle':
       return <BottleSpinScreen />;
+
+    case 'king':
+      return <KingModeScreen />;
 
     default:
       return <SetupScreen />;
