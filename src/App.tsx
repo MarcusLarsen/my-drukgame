@@ -4,33 +4,49 @@ import ModeSelectScreen from './components/ModeSelectScreen';
 import BottleSpinScreen from './components/BottleSpinScreen';
 import BottleModeSelectScreen from './components/BottleModeSelectScreen';
 import KingModeScreen from './components/KingModeScreen';
+import UpdatePrompt from './components/UpdatePrompt';
 import { useSession } from './store/session';
 
 function App() {
   const screen = useSession((s) => s.screen);
 
+  let content;
+
   switch (screen) {
     case 'setup':
-      return <SetupScreen />;
+      content = <SetupScreen />;
+      break;
 
     case 'mode':
-      return <ModeSelectScreen />;
+      content = <ModeSelectScreen />;
+      break;
 
     case 'game':
-      return <GameScreen />;
+      content = <GameScreen />;
+      break;
 
     case 'bottleMode':
-      return <BottleModeSelectScreen />;
+      content = <BottleModeSelectScreen />;
+      break;
 
     case 'bottle':
-      return <BottleSpinScreen />;
+      content = <BottleSpinScreen />;
+      break;
 
     case 'king':
-      return <KingModeScreen />;
+      content = <KingModeScreen />;
+      break;
 
     default:
-      return <SetupScreen />;
+      content = <SetupScreen />;
   }
+
+  return (
+    <>
+      {content}
+      <UpdatePrompt />
+    </>
+  );
 }
 
 export default App;
