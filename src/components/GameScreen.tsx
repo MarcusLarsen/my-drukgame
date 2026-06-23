@@ -12,6 +12,149 @@ import {
   legendaryChaosRules,
 } from '../data/chaosRules';
 
+const teamCards: Card[] = [
+  {
+    id: 't1',
+    text: '{TEAM1} tager 2 slurke.',
+    category: 'team',
+    level: 1,
+    target: 'team',
+  },
+  {
+    id: 't2',
+    text: '{TEAM2} tager 2 slurke.',
+    category: 'team',
+    level: 1,
+    target: 'team',
+  },
+  {
+    id: 't3',
+    text: '{TEAM1} vælger én spiller fra {TEAM2}, som tager 3 slurke.',
+    category: 'team',
+    level: 2,
+    target: 'team',
+  },
+  {
+    id: 't4',
+    text: '{TEAM2} vælger én spiller fra {TEAM1}, som tager 3 slurke.',
+    category: 'team',
+    level: 2,
+    target: 'team',
+  },
+  {
+    id: 't5',
+    text: '{TEAM1PLAYER} og {TEAM2PLAYER} spiller sten-saks-papir. Taberens hold tager 2 slurke.',
+    category: 'team',
+    level: 2,
+    target: 'team',
+  },
+  {
+    id: 't6',
+    text: 'Begge hold vælger en kaptajn. Kaptajnerne duellerer i sten-saks-papir. Taberholdet tager 3 slurke.',
+    category: 'team',
+    level: 2,
+    target: 'team',
+  },
+  {
+    id: 't7',
+    text: 'Første hold der kan nævne 5 bilmærker vinder. Taberholdet tager 2 slurke.',
+    category: 'team',
+    level: 2,
+    target: 'team',
+  },
+  {
+    id: 't8',
+    text: 'Første hold der kan nævne 5 lande vinder. Taberholdet tager 2 slurke.',
+    category: 'team',
+    level: 2,
+    target: 'team',
+  },
+  {
+    id: 't9',
+    text: '{TEAM1} skal vælge én spiller, der mimer en film. Hvis holdet ikke gætter den på 20 sekunder, tager holdet 3 slurke.',
+    category: 'team',
+    level: 2,
+    target: 'team',
+  },
+  {
+    id: 't10',
+    text: '{TEAM2} skal vælge én spiller, der mimer en film. Hvis holdet ikke gætter den på 20 sekunder, tager holdet 3 slurke.',
+    category: 'team',
+    level: 2,
+    target: 'team',
+  },
+  {
+    id: 't11',
+    text: 'Alle på {TEAM1} giver highfive til hinanden. Langsomste spiller tager 2 slurke.',
+    category: 'team',
+    level: 1,
+    target: 'team',
+  },
+  {
+    id: 't12',
+    text: 'Alle på {TEAM2} giver highfive til hinanden. Langsomste spiller tager 2 slurke.',
+    category: 'team',
+    level: 1,
+    target: 'team',
+  },
+  {
+    id: 't13',
+    text: '{TEAM1PLAYER} skal give {TEAM2PLAYER} et kompliment. Hvis det er dårligt, tager {TEAM1} 2 slurke.',
+    category: 'team',
+    level: 2,
+    target: 'team',
+  },
+  {
+    id: 't14',
+    text: '{TEAM2PLAYER} skal give {TEAM1PLAYER} et kompliment. Hvis det er dårligt, tager {TEAM2} 2 slurke.',
+    category: 'team',
+    level: 2,
+    target: 'team',
+  },
+  {
+    id: 't15',
+    text: 'Begge hold vælger en spiller til duel. Den der kan holde seriøst ansigt længst vinder. Taberholdet tager 3 slurke.',
+    category: 'team',
+    level: 2,
+    target: 'team',
+  },
+  {
+    id: 't16',
+    text: '{TEAM1} skal lave en fælles skål.',
+    category: 'team',
+    level: 1,
+    target: 'team',
+  },
+  {
+    id: 't17',
+    text: '{TEAM2} skal lave en fælles skål.',
+    category: 'team',
+    level: 1,
+    target: 'team',
+  },
+  {
+    id: 't18',
+    text: 'Det hold med færrest spillere tager 2 slurke. Ved lige mange tager begge hold 2 slurke.',
+    category: 'team',
+    level: 1,
+    target: 'team',
+  },
+  {
+    id: 't19',
+    text: 'Hvert hold vælger den mest højlydte spiller på modstanderholdet. De valgte spillere tager 2 slurke.',
+    category: 'team',
+    level: 2,
+    target: 'team',
+  },
+  {
+    id: 't20',
+    text: 'Første hold der kan nævne 5 ting man finder i et køkken vinder. Taberholdet tager 2 slurke.',
+    category: 'team',
+    level: 2,
+    target: 'team',
+  },
+];
+
 const baseDeck: Card[] = [
   ...soft,
   ...party,
@@ -74,6 +217,7 @@ export default function GameScreen() {
     chaosRules,
     addChaosRule,
     history,
+    teams,
   } = useSession();
 
   const initialized = useRef(false);
@@ -97,11 +241,19 @@ export default function GameScreen() {
       }
 
       if (mode === 'normal') {
-        filtered = fullDeck.filter((c) => c.category !== 'spicy');
+        filtered = fullDeck.filter(
+          (c) => c.category !== 'spicy' && c.category !== 'team'
+        );
       }
 
       if (mode === 'chaos') {
-        filtered = fullDeck.filter((c) => c.category !== 'soft');
+        filtered = fullDeck.filter(
+          (c) => c.category !== 'soft' && c.category !== 'team'
+        );
+      }
+
+      if (mode === 'teams') {
+        filtered = teamCards;
       }
 
       loadDeck(filtered);
@@ -121,7 +273,18 @@ export default function GameScreen() {
   }
 
   const modeEmoji =
-    gameMode === 'chaos' ? '🔥' : gameMode === 'spicy' ? '🌶️' : '🍺';
+    gameMode === 'chaos'
+      ? '🔥'
+      : gameMode === 'spicy'
+      ? '🌶️'
+      : gameMode === 'teams'
+      ? '👥'
+      : '🍺';
+
+  const modeLabel =
+    gameMode === 'teams'
+      ? 'HOLD MODE'
+      : gameMode.toUpperCase();
 
   const isGameOver = !currentCard && currentIndex > 0;
 
@@ -170,6 +333,25 @@ export default function GameScreen() {
   return (
     <div className="min-h-screen bg-slate-900 text-white p-6 flex items-center justify-center">
       <div className="w-full max-w-lg flex flex-col gap-6">
+        {gameMode === 'teams' && teams.length >= 2 && (
+          <div className="grid grid-cols-2 gap-3">
+            {teams.map((team) => (
+              <div
+                key={team.id}
+                className="bg-slate-800 rounded-2xl p-4 shadow-xl"
+              >
+                <div className="font-black text-lg">
+                  {team.emoji} {team.name}
+                </div>
+
+                <div className="text-sm text-slate-400 mt-2">
+                  {team.players.map((p) => p.name).join(', ')}
+                </div>
+              </div>
+            ))}
+          </div>
+        )}
+
         {gameMode === 'chaos' && chaosRules.length > 0 && (
           <div className="bg-orange-500/10 border border-orange-500 rounded-2xl p-4">
             <h2 className="font-black text-orange-400 mb-2">
@@ -201,8 +383,7 @@ export default function GameScreen() {
             className="bg-slate-800 p-8 rounded-3xl shadow-2xl"
           >
             <div className="text-slate-400 mb-3">
-              {modeEmoji} {gameMode.toUpperCase()} •{' '}
-              {currentCard.category.toUpperCase()}
+              {modeEmoji} {modeLabel} • {currentCard.category.toUpperCase()}
             </div>
 
             <div className="text-3xl font-bold leading-relaxed">

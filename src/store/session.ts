@@ -11,9 +11,16 @@ export type Player = {
 export type Card = {
   id: string;
   text: string;
-  category: 'soft' | 'party' | 'spicy';
+  category: 'soft' | 'party' | 'spicy' | 'team';
   level: 1 | 2 | 3;
-  target: 'all' | 'one' | 'vote' | 'rule' | 'duel';
+  target: 'all' | 'one' | 'vote' | 'rule' | 'duel' | 'team';
+};
+
+export type Team = {
+  id: 'red' | 'blue';
+  name: string;
+  emoji: string;
+  players: Player[];
 };
 
 export type ChaosRule = {
@@ -26,12 +33,7 @@ export type ChaosRule = {
 export type CustomBottlePrompt = {
   id: string;
   text: string;
-  category:
-    | 'truth'
-    | 'dare'
-    | 'challenge'
-    | 'drink'
-    | 'dating';
+  category: 'truth' | 'dare' | 'challenge' | 'drink' | 'dating';
 };
 
 type HistoryItem = {
@@ -48,7 +50,7 @@ export type Screen =
   | 'bottle'
   | 'king';
 
-export type GameMode = 'normal' | 'chaos' | 'spicy';
+export type GameMode = 'normal' | 'chaos' | 'spicy' | 'teams';
 
 export type BottleMode =
   | 'truth'
@@ -65,6 +67,8 @@ type SessionState = {
   started: boolean;
 
   players: Player[];
+  teams: Team[];
+
   deck: Card[];
   customCards: Card[];
   customBottlePrompts: CustomBottlePrompt[];
@@ -79,6 +83,7 @@ type SessionState = {
   setGameMode: (mode: GameMode) => void;
   setBottleMode: (mode: BottleMode) => void;
   setPlayers: (names: string[]) => void;
+  generateTeams: () => void;
 
   loadDeck: (cards: Card[]) => void;
   act: (action: Action, playerIds?: string[]) => void;
@@ -93,9 +98,14 @@ type SessionState = {
   removeCustomBottlePrompt: (id: string) => void;
 };
 
+function randomFrom<T>(list: T[]): T | undefined {
+  return list[Math.floor(Math.random() * list.length)];
+}
+
 function prepareCard(
   card: Card | undefined,
-  players: Player[]
+  players: Player[],
+  teams: Team[]
 ): Card | null {
   if (!card) return null;
 
@@ -112,6 +122,20 @@ function prepareCard(
       .replaceAll('{NAME}', p1.name)
       .replaceAll('{NAME2}', p2.name)
       .replaceAll('{NAME3}', p3.name);
+  }
+
+  if (teams.length >= 2) {
+    const team1 = teams[0];
+    const team2 = teams[1];
+
+    const team1Player = randomFrom(team1.players);
+    const team2Player = randomFrom(team2.players);
+
+    text = text
+      .replaceAll('{TEAM1}', `${team1.emoji} ${team1.name}`)
+      .replaceAll('{TEAM2}', `${team2.emoji} ${team2.name}`)
+      .replaceAll('{TEAM1PLAYER}', team1Player?.name ?? team1.name)
+      .replaceAll('{TEAM2PLAYER}', team2Player?.name ?? team2.name);
   }
 
   return {
@@ -144,6 +168,8 @@ export const useSession = create<SessionState>()(
       started: false,
 
       players: [],
+      teams: [],
+
       deck: [],
       customCards: [],
       customBottlePrompts: [],
@@ -156,7 +182,15 @@ export const useSession = create<SessionState>()(
 
       setScreen: (screen) => set({ screen }),
 
-      setGameMode: (gameMode) => set({ gameMode }),
+      setGameMode: (gameMode) =>
+        set({
+          gameMode,
+          deck: [],
+          currentIndex: 0,
+          currentCard: null,
+          history: [],
+          chaosRules: [],
+        }),
 
       setBottleMode: (bottleMode) => set({ bottleMode }),
 
@@ -170,11 +204,38 @@ export const useSession = create<SessionState>()(
             .filter((p) => p.name.length > 0),
         }),
 
+      generateTeams: () => {
+        const players = get().players;
+        const shuffled = [...players].sort(() => Math.random() - 0.5);
+
+        const red = shuffled.filter((_, index) => index % 2 === 0);
+        const blue = shuffled.filter((_, index) => index % 2 === 1);
+
+        set({
+          teams: [
+            {
+              id: 'red',
+              name: 'Hold Rød',
+              emoji: '🔴',
+              players: red,
+            },
+            {
+              id: 'blue',
+              name: 'Hold Blå',
+              emoji: '🔵',
+              players: blue,
+            },
+          ],
+        });
+      },
+
       loadDeck: (cards) => {
         const shuffled = [...cards].sort(() => Math.random() - 0.5);
 
         const preparedDeck = shuffled
-          .map((card) => prepareCard(card, get().players))
+          .map((card) =>
+            prepareCard(card, get().players, get().teams)
+          )
           .filter((card): card is Card => card !== null);
 
         set({
@@ -235,6 +296,7 @@ export const useSession = create<SessionState>()(
           screen: 'setup',
           gameMode: 'normal',
           started: false,
+          teams: [],
           deck: [],
           currentIndex: 0,
           currentCard: null,
@@ -278,7 +340,7 @@ export const useSession = create<SessionState>()(
         })),
     }),
     {
-      name: 'drukgame-session-v5',
+      name: 'drukgame-session-v6',
       partialize: (state) => ({
         players: state.players,
         customCards: state.customCards,

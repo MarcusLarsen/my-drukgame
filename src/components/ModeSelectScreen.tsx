@@ -3,12 +3,25 @@ import { useSession } from '../store/session';
 export default function ModeSelectScreen() {
   const setGameMode = useSession((s) => s.setGameMode);
   const setScreen = useSession((s) => s.setScreen);
+  const generateTeams = useSession((s) => s.generateTeams);
 
   const players = useSession((s) => s.players);
-  const canPlayKing = players.length >= 3;
 
-  function select(mode: 'normal' | 'chaos' | 'spicy') {
+  const canPlayKing = players.length >= 3;
+  const canPlayTeams = players.length >= 4;
+
+  function select(
+    mode: 'normal' | 'chaos' | 'spicy'
+  ) {
     setGameMode(mode);
+    setScreen('game');
+  }
+
+  function startTeamsMode() {
+    if (!canPlayTeams) return;
+
+    generateTeams();
+    setGameMode('teams');
     setScreen('game');
   }
 
@@ -38,6 +51,20 @@ export default function ModeSelectScreen() {
           className="bg-red-500 hover:bg-red-400 transition p-5 rounded-2xl font-black text-xl"
         >
           🌶️ Spicy
+        </button>
+
+        <button
+          onClick={startTeamsMode}
+          disabled={!canPlayTeams}
+          className={`transition p-5 rounded-2xl font-black text-xl ${
+            canPlayTeams
+              ? 'bg-cyan-600 hover:bg-cyan-500'
+              : 'bg-slate-600 text-slate-400 cursor-not-allowed'
+          }`}
+        >
+          {canPlayTeams
+            ? '👥 Hold Mode'
+            : '👥 Hold Mode kræver mindst 4 spillere'}
         </button>
 
         <button
