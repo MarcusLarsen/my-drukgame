@@ -181,7 +181,7 @@ export default function SetupScreen() {
           </h2>
 
           <p className="text-slate-400 text-sm">
-            Vælg hvilken kategori kortet tilhører. Spicy-kort kommer kun med i Spicy mode.
+            Vælg hvilken kategori kortet tilhører. Soft-kort kommer kun med i Soft mode.
           </p>
 
           <textarea
